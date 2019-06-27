@@ -1,5 +1,6 @@
 # recyclerview
-关于手动添加RecyclerView列表项 导致Item里的EditText数据混乱的问题
+[关于手动添加RecyclerView列表项 导致Item里的EditText数据混乱的问题](https://github.com/chaoyangsun/recyclerview)
+
 如果没有手动添加Item这个功能，比较好处理一些，最简单的方法禁止复用`holder.setIsRecyclable(false);`，但如果有手动添加Item，或者要监听EditText的addTextChangedListener，这时就是禁止复用也没有效果。
 此时，就得使用绑定tag的方法：
 
