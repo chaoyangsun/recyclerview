@@ -2,6 +2,7 @@
 关于手动添加RecyclerView列表项 导致Item里的EditText数据混乱的问题
 如果没有手动添加Item这个功能，比较好处理一些，最简单的方法禁止复用`holder.setIsRecyclable(false);`，但如果有手动添加Item，或者要监听EditText的addTextChangedListener，这时就是禁止复用也没有效果。
 此时，就得使用绑定tag的方法：
+
 第一、为列表实体类添加一个属性uid，作为一个唯一标志，再创建实体类Data的时候，为这个属性设置一个唯一值
 
 ```
